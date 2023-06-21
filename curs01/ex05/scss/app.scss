@@ -2,6 +2,10 @@ $cHover: red;
 $cActive: purple;
 $cGreen: green;
 
+$oHover: magenta;
+$oActive: pink;
+$oVisited: lightcoral;
+
 ul {
   a {
     text-decoration: none;
@@ -36,5 +40,27 @@ ul {
   .reverse & {
     width: 100%;
     padding: 10px 20px;
+  }
+}
+
+ol {
+  a {
+    &:hover {
+      color: $oHover;
+    }
+
+    &:active {
+      color: $oActive;
+    }
+
+    &:visited {
+      color: $oVisited;
+    }
+  }
+}
+
+.all-visited {
+  a {
+    text-decoration: line-through;
   }
 }
