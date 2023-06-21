@@ -42,7 +42,7 @@
   margin: 0 auto;
 }
 
-.circle {
+@mixin circle {
   width: 200px;
   height: 200px;
   border: 3px solid red;
@@ -50,18 +50,30 @@
   background: purple;
 }
 
+@mixin circleBg($circleColor: red) {
+  background: $circleColor;
+}
+
+.circle {
+  @include circle();
+}
+
 .circle-red {
-  background: red;
+  @include circleBg(red);
 }
 
 .circle-green {
-  background: green;
+  @include circleBg(green);
 }
 
 .circle-blue {
-  background: blue;
+  @include circleBg(blue);
+}
+
+@mixin borderColor($bColor: blue) {
+  border-color: $bColor;
 }
 
 .circle-border-blue {
-  border-color: blue;
+  @include borderColor(blue);
 }
