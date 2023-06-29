@@ -30,3 +30,16 @@ $spacings: (
     margin: $value;
   }
 }
+
+$margins: (
+  'xs': 4px,
+  'sm': 8px,
+  'md': 16px,
+  'lg': 32px,
+);
+
+@each $margin, $value in $margins {
+  .p-#{$margin} {
+    padding: $value;
+  }
+}
